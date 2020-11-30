@@ -13,8 +13,8 @@ catalog = Catalog()
 
 b = catalog.addBook('Shoe Dog','Phil Knight', '2015',312)
 catalog.addBookItem(b, '123hg','H1B2')
-catalog.addBookItem(b, '124hg','H1B4')
-catalog.addBookItem(b, '125hg','H1B5')
+catalog.addBookItem(b, '123hg','H1B4')
+catalog.addBookItem(b, '123hg','H1B5')
 
 b = catalog.addBook('Moonwalking with Einstien','J Foer', '2017',318)
 catalog.addBookItem(b, '463hg','K1B2')
