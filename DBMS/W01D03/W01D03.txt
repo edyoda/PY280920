@@ -1,0 +1,55 @@
+CREATE TABLE cartoon(FirstName VARCHAR(10), LastName VARCHAR(10), Address VARCHAR(20), City VARCHAR(10), Age Int);
+
+INSERT INTO cartoon VALUES
+    ("Bat","Man","321 Cavern Ave","Gotham",54),
+    ("Wonder","Woman","987 Truth Way","Paradise"
+    ,39),
+    ("Donald","Duck","555 Quack Street","Mallard"
+    ,65);
+
+SELECT * FROM cartoon;
+
+CREATE TABLE sales(purchase_number INT,date_of_purchase DATE,customer_id INT,item_code VARCHAR(3));
+
+INSERT INTO sales VALUES
+    (1,'2016-09-03',1,'A_1'),
+    (2,'2016-12-02',2,'C_1'),
+    (3,'2017-04-15',3,'D_1'),
+    (4,'2017-05-24',1,'B_2'),
+    (5,'2017-05-25',4,'B_2');
+
+SELECT * FROM sales;
+
+CREATE TABLE student2(
+student_id INT PRIMARY KEY,
+name VARCHAR(10),
+major VARCHAR(15)
+);
+
+INSERT INTO student2 VALUES
+(1,"Jack","Biology"),
+(2,"Kate","Sociology"),
+(3,"Claire","English"),
+(4,"Jack","Biology"),
+(5,"Mike","Comp. Sci");
+
+SELECT * FROM student2;
+
+# Let's try to insert some NULL VALUES:
+INSERT INTO student2 VALUES
+(NULL,"Jack","Biology");
+
+# Let's try to insert duplicate
+value into primary key column;
+INSERT INTO student2 VALUES
+(1,"Mac","Mechatronics");
+
+CREATE TABLE sensex (Position INT PRIMARY KEY,
+    Name VARCHAR(10), Balance DECIMAL(5,2),Date DATE);
+
+INSERT INTO sensex values
+    (2,"Upple",53.45,"1996-04-28"),
+    (1,"Crosoft",145.76,"1997-08-14"),
+    (3,"Ladobe",49.03,"1993-09-06");
+
+SELECT * FROM sensex;
