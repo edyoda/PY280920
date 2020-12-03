@@ -1,0 +1,39 @@
+CREATE DATABASE CRICKET;
+
+USE CRICKET;
+
+CREATE TABLE CRICKET1 (Cricketer_Name VARCHAR(10), Highest_Score INT, Date_of_match_on_HS DATE);
+
+INSERT INTO CRICKET1 VALUES
+    ("Virat",135,"2014-10-02"),
+    ("Sachin",141,"2010-05-03"),
+    ("Anil",97,"2016-08-07");
+
+DESC cricket1;
+
+SELECT * FROM cricket1;
+
+
+a primary key is a specific choice of a minimal set of columns that uniquely specify a row in a table.
+
+a foreign key is a set of attributes in a table that refers to the primary key of another table. The foreign key links these two tables.
+
+CREATE TABLE STUDENTS(
+    id INT PRIMARY KEY,
+    name VARCHAR(20),
+    class VARCHAR(10),
+    mark INT,
+    sex VARCHAR(10));
+
+INSERT INTO students VALUES
+    (1, "John Deo", "Four", 75, "female"),
+    (2, "Max Ruin", "Three", 85, "male"),
+    (3, "Arnold", "Three", 55, "male"),
+    (4, "Krish Star", "Four", 60, "female"),
+    (5, "John Mike", "Four", 60, "female");
+
+SELECT * FROM students;
+
+DESC students;
+// see ID is a PRI
+
