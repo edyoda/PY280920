@@ -1,0 +1,83 @@
+USE classicmodels
+SHOW TABLES;
+
+Q1) Print all the PK columns of Offices Table.
+Q2) Print all the FK and PK of Orders Table.
+
+DESC offices;
+SELECT officeCode FROM offices;
+
+SELECT orderNumber,customerNumber FROM orders ORDER BY customerNumber DESC;
+
+Q3) ORDER BY ORDERNUMBER ASCENDING IN ORDERS TABLE WITH FK AND PK COLUMNS.
+
+SELECT orderNumber,customerNumber FROM orders ORDER BY orderNumber;
+
+SELECT * FROM offices WHERE officecode>4;
+
+Q4) Get Productcode and productline of the Planes from Products table.
+
+SELECT productCode, productLine FROM products WHERE productLine = 'Planes';
+
+Q5) Get productcode and productlines of the planes and vintage cars from the products table.
+
+SELECT productCode, productLine FROM products WHERE productLine = 'Planes' OR productLine="Vintage Cars";
+
+//employees table
+
+Q6) Find firstname and lastname of all the employees who work in office with officecode = 1 and is a sales rep.
+
+ SELECT firstName, lastName FROM employees WHERE officeCode="1" AND jobTitle="Sales Rep";
+
+SHOW TABLES;
+DESC payments;
+SELECT customerNumber,amount FROM payments;
+SELECT customerNumber,amount FROM payments ORDER BY amount;
+SELECT customerNumber FROM payments WHERE amount BETWEEN 615 AND 3102;
+SELECT customerNumber FROM payments WHERE amount BETWEEN 615 AND 3102 ORDER BY amount;
+
+DESC payments;
+DESC Employees;
+SELECT firstName FROM employees WHERE firstName BETWEEN 'A' AND 'D';
+SELECT firstName FROM employees ORDER BY firstName;
+SELECT firstName FROM employees WHERE firstName BETWEEN 'A' AND 'E';
+SELECT firstName FROM employees WHERE firstName BETWEEN 'A' AND 'F';
+DESC payments;
+SELECT paymentDate,amount FROM payments;
+SELECT paymentDate,amount FROM payments ORDER BY paymentDate;
+SELECT paymentDate,amount FROM payments WHERE paymentDate BETWEEN '2004-03-24' AND '2004-05-04';
+
+SHOW DATABASES;
+USE cricket;
+SHOW TABLES;
+SELECT * FROM cricket1;
+UPDATE cricket1 SET Highest_Score = 150 WHERE Cricketer_Name='Virat';
+SELECT * FROM cricket1;
+DELETE FROM cricket1 WHERE Highest_Score<100;
+SELECT * FROM cricket1;
+
+USE CLASSICMODELS;
+SHOW TABLES;
+DESC CUSTOMERS;
+SELECT customerName,city,state FROM CUSTOMERS;
+SELECT customerName,city,state FROM CUSTOMERS ORDER BY city;
+DESC CUSTOMERS;
+SELECT customerName,city,CREDITLIMIT FROM CUSTOMERS;
+SELECT customerName,city,CREDITLIMIT FROM CUSTOMERS ORDER BY CITY;
+DESC CUSTOMERS;
+
+ 615.45 ----- 3101.40
+ SELECT customerNumber FROM payments WHERE amount BETWEEN 615 AND 3102
+
+ 2004-03-24 ---- 2004-05-04
+SELECT paymentDate,amount FROM
+payments WHERE paymentDate BETWEEN '2004-03-24' AND '2004-05-04';
+
+Q7) Print all the customers customerName,city and creditlimit who lives in New Haven OR NYC and their creditlimit is > 95000.
+Also Print the highest amount first and so on...
+
+SELECT customerName, city, creditLimit FROM customers WHERE (city = "New Haven" or city = "NYC") AND creditLimit > 95000 ORDER BY creditLimit DESC;
+
+DESC products;
+SELECT COUNT(productLine),productLine FROM products GROUP BY productLine;
+SELECT productLine FROM products GROUP BY productLine;
