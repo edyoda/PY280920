@@ -1,0 +1,18 @@
+ USE cricket;
+ SELECT count(*) FROM students GROUP BY sex;
+ SELECT sex,count(*) FROM students GROUP BY sex;
+ SELECT sex,count(id) FROM students GROUP BY sex;
+ SELECT sex,count(name) FROM students GROUP BY sex;
+ SELECT sex,count(mark) FROM students GROUP BY sex;
+
+use mohit;
+SELECT * FROM employee;
+SELECT sex,count(super_id) FROM employee GROUP BY sex;
+SELECT sex,count(super_id) FROM employee GROUP BY sex;
+SELECT sex,count(*) FROM employee GROUP BY sex;
+SELECT sex,count(sex) FROM employee GROUP BY sex;
+
+select branch_id,count(emp_id) from employee group by branch_id;
+select branch_id,sum(salary) from employee group by branch_id;
+select branch_id,min(salary) from employee group by branch_id;
+select branch_id,max(salary) from employee group by branch_id;
