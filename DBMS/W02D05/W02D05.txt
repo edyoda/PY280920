@@ -1,0 +1,45 @@
+show databases;
+use cricket;
+show tables;
+SELECT * FROM dance;
+SELECT * FROM music;
+SELECT NAME AS FULLNAME FROM music;
+SELECT m.NAME FROM music as m;
+SELECT * FROM MUSIC;
+SELECT * FROM DANCE;
+
+SELECT D.ID,D.NAME,M.ID,M.NAME
+    FROM DANCE AS D
+    JOIN
+    MUSIC AS M
+    ON D.ID = M.ID;
+
+ SELECT D.ID,D.NAME,M.ID,M.NAME
+    FROM DANCE AS D
+    LEFT JOIN
+    MUSIC AS M
+    ON D.ID = M.ID;
+
+ SELECT D.ID,D.NAME,M.ID,M.NAME
+    FROM DANCE AS D
+    RIGHT JOIN
+    MUSIC AS M
+    ON D.ID = M.ID;
+
+USE MOHIT;
+SHOW TABLES;
+SELECT * FROM EMPLOYEE;
+
+SELECT E1.FIRST_NAME,E2.FIRST_NAME
+    FROM
+    EMPLOYEE AS E1
+    JOIN
+    EMPLOYEE AS E2
+    ON E1.SUPER_ID=E2.EMP_ID;
+
+SELECT B1.branch_name,E1.first_name
+    FROM
+    EMPLOYEE AS E1
+    JOIN
+    BRANCH AS B1
+    ON B1.mgr_id = E1.emp_id;
